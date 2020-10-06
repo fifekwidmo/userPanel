@@ -7,6 +7,9 @@ passport.use(new GoogleStrategy({
 	callbackURL: process.env.callbackURL,
 }, (accessToken, refreshToken, profile, done) => {
 done(null, profile);
+console.log(process.env.clientID);
+console.log(process.env.clientSecret);
+console.log(process.env.callbackURL);
 }));
 
 // serialize user when saving to session
